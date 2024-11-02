@@ -1,0 +1,149 @@
+/* Estilos generales */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    font-family: Arial, sans-serif; /* Cambia la fuente según tu preferencia */  
+    background-color: #222; /* Fondo general */  
+}  
+
+/* Navegación */  
+nav {  
+    display: flex;  
+    justify-content: space-between; /* Espacio entre logo y enlaces */  
+    align-items: center; /* Alinear verticalmente */  
+    padding: 1rem; /* Espaciado alrededor del menú */  
+    background-color: #333; /* Color de fondo del menú */  
+}  
+
+nav .logo {  
+    flex-grow: 1; /* Hace que el logo ocupe el espacio disponible */  
+}  
+
+nav ul {  
+    display: flex;  
+    justify-content: flex-end; /* Alinear a la derecha */  
+    gap: 1.5rem; /* Espaciado entre los enlaces */  
+    list-style-type: none; /* Quitar viñetas */  
+}  
+
+nav ul li {  
+    display: inline;  
+}  
+
+nav ul li a {  
+    color: #fff; /* Color del texto */  
+    text-decoration: none; /* Sin subrayado */  
+    font-weight: bold; /* Texto en negrita */  
+    transition: color 0.3s; /* Transición suave al pasar el mouse */  
+}  
+
+nav ul li a:hover {  
+    color: #f00; /* Rojo al pasar el mouse */  
+}  
+
+/* Sección Hero */  
+.hero {  
+    position: relative;  
+    height: 100vh;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 50px;  
+    background-image: url('mano.webp'); /* Imagen de fondo */  
+    background-size: cover;  
+    background-position: center;  
+    background-attachment: fixed; /* Fondo fijo */  
+    z-index: 0; /* Ajustado a 0 para que la superposición tenga visibilidad */  
+}  
+
+.hero-overlay {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(0, 0, 0, 0.6); /* Superposición semi-transparente */  
+    z-index: 1; /* Superposición por encima de la imagen de fondo */  
+}  
+
+.hero-text {  
+    position: relative;  
+    z-index: 2; /* Asegura que el texto esté por encima de la superposición */  
+    flex: 1;  
+    color: #fff; /* Color del texto */  
+    padding-right: 20px; /* Espacio a la derecha para el texto */  
+}  
+
+.hero-text h1 {  
+    font-size: 5rem; /* Tamaño grande */  
+    font-weight: bold; /* Negrita */  
+    margin-bottom: 1rem; /* Espaciado inferior */  
+}  
+
+.hero-text p {  
+    font-size: 1.5rem; /* Tamaño del párrafo */  
+    margin-bottom: 2rem; /* Espaciado inferior */  
+}  
+
+/* Botón de llamada a la acción */  
+.cta {  
+    padding: 1rem 2rem;  
+    background-color: red; /* Color de fondo */  
+    color: #fff; /* Color del texto */  
+    text-decoration: none; /* Sin subrayado */  
+    border-radius: 5px; /* Bordes redondeados */  
+    font-size: 1.5rem; /* Tamaño de fuente más grande */  
+    font-weight: bold; /* Negrita */  
+    transition: background-color 0.3s; /* Transición al pasar el mouse */  
+    margin-top: 2rem; /* Espaciado superior */  
+}  
+
+.cta:hover {  
+    background-color: #ff0000; /* Color más oscuro al pasar el mouse */  
+}  
+
+/* Sección de imagen */  
+.hero-image {  
+    flex: 1; /* Toma el espacio restante */  
+    text-align: right; /* Alinear imagen a la derecha */  
+    opacity: 1; /* Opacidad inicial */  
+    transition: opacity 0.5s ease-in-out; /* Transición de opacidad */  
+}  
+
+.hero-image img {  
+    max-width: 100%; /* Asegura que la imagen no exceda su contenedor */  
+    height: auto; /* Mantiene proporción */  
+    border-radius: 10px; /* Bordes redondeados */  
+}  
+
+/* Cuando se desplaza, la imagen se desvanece */  
+.hero.scrolled .hero-image {  
+    opacity: 0; /* Desvanecer cuando se desplaza */  
+}  
+
+/* Sección de contenido adicional */  
+.content {  
+    padding: 5rem 2rem; /* Espaciado */  
+    background-color: #111; /* Color de fondo */  
+    color: #fff; /* Color del texto */  
+    text-align: center; /* Texto centrado */  
+}  
+
+.content h2 {  
+    font-size: 2.5rem; /* Tamaño del encabezado */  
+    margin-bottom: 2rem; /* Espaciado inferior */  
+}  
+
+.content p {  
+    font-size: 1.2rem; /* Tamaño del párrafo */  
+    line-height: 1.6; /* Interlineado */  
+}  
+
+/* Comportamiento de desplazamiento suave */  
+html {  
+    scroll-behavior: smooth; /* Desplazamiento suave */  
+}
